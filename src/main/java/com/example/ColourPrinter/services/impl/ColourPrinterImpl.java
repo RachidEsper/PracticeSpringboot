@@ -5,17 +5,18 @@ import com.example.ColourPrinter.services.ColourPrinter;
 import com.example.ColourPrinter.services.GreenPrinter;
 import com.example.ColourPrinter.services.RedPrinter;
 
-public class EnglishColorPrinterImpl implements ColourPrinter {
+public class ColourPrinterImpl implements ColourPrinter {
 
     private RedPrinter redPrinter;
     private GreenPrinter greenPrinter;
     private BluePrinter bluePrinter;
 
 
-    public EnglishColorPrinterImpl( ) {
-        this.redPrinter = new EnglishRedPrinterImpl();
-        this.greenPrinter = new EnglishGreenPrinterImpl();
-        this.bluePrinter = new EnglishBluePrinterImpl();
+    public ColourPrinterImpl(RedPrinter redPrinter, GreenPrinter greenPrinter, BluePrinter bluePrinter ) {
+        this.redPrinter=redPrinter;
+        this.bluePrinter=bluePrinter;
+        this.greenPrinter=greenPrinter;
+
     }
 
 
